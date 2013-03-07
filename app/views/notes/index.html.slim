@@ -1,0 +1,12 @@
+h1 My Notes
+
+ul
+  - for note in @notes do
+    li= note.note
+
+br
+br
+
+= form_for Note.new do |f|
+	= f.text_field :note
+	= f.submit 'Add Note'
